@@ -6,7 +6,10 @@ from langchain_core.prompts import ChatPromptTemplate
 
 try:
     from hf_read_api import HF_API_TOKEN
-    hf_token = HF_API_TOKEN
+    try:
+        hf_token = HF_API_TOKEN
+    except:
+        pass
 except:
     os.environ["hf_token"] == st.secrets["HF_TOKEN"]
     hf_token = os.environ["hf_token"]
