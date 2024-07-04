@@ -56,7 +56,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 def llm_response(user_query, chat_history):
     llm = HuggingFaceEndpoint(
-        huggingfacehub_api_token = HF_API_TOKEN,
+        huggingfacehub_api_token = hf_token,
         repo_id = repo_id,
         task = task
     )
