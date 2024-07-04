@@ -3,9 +3,14 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from hf_read_api import HF_API_TOKEN
 
-hf_token = HF_API_TOKEN
+try:
+    from hf_read_api import HF_API_TOKEN
+    hf_token = HF_API_TOKEN
+except:
+    os.environ["hf_token"] == st.secrets["HF_TOKEN"]
+    hf_token = os.environ["hf_token"]
+
 
 # HF Model and Task
 repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
