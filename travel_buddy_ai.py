@@ -12,8 +12,7 @@ try:
     except:
         pass
 except:
-    os.environ["hf_token"] == st.secrets["HF_TOKEN"]
-    hf_token = os.environ["hf_token"]
+    hf_token = st.secrets["HF_TOKEN"]
 
 
 # HF Model and Task
