@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-.hf_read_api.py
+hf_read_api.py
 
 # C extensions
 *.so
